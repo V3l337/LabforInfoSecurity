@@ -33,6 +33,9 @@ FIN-пакет отправляется для завершения TCP-соед
 Этот тип сканирования отправляет UDP-пакеты на целевые порты. Если порт закрыт, сервер может отправить ICMP-сообщение типа "Port Unreachable". Открытые порты могут не ответить, так как UDP является бесконтактным протоколом
 ```
 [nmap_sS.pcapng](namp_sF.pcapng)
+
 [namp_sF.pcapng](namp_sF.pcapng)
+
 [nmap_sX.pcapng](namp_sF.pcapng)
+
 [nmap_sU.pcapng](namp_sF.pcapng)
