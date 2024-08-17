@@ -1,17 +1,16 @@
 # Task1
+```
+Установите eCryptfs.
+Добавьте пользователя cryptouser.
+Зашифруйте домашний каталог пользователя с помощью eCryptfs.
+```
+```
+ecryptfs-migrate-home -u cryptouser
+ecryptfs-recover-private
+```
+![](11.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
+![](12.png)
 
 
 # Task2
@@ -60,6 +59,9 @@ sda                         8:0    0 298.1G  0 disk
 ```
 cryptsetup luksFormat /dev/mapper/ubuntu--vg-new--lv
 ```
+
+![](23.png)
+
 4. Открываем созданый раздел
 ```
 cryptsetup open /dev/ubuntu-vg/new-lv cryptovolume
@@ -81,6 +83,9 @@ sda                         8:0    0 298.1G  0 disk
 ```
 mkfs.ext4 /dev/mapper/cryptovolume
 ```
+
+![](24.png)
+
 7. Монтирую в систему ОС
 ```
 mkdir /crypto_volume
@@ -88,4 +93,4 @@ mount /dev/mapper/cryptovolume /crypto_volume
 ```
 8. Проверяю
 
-
+![](25.png)
