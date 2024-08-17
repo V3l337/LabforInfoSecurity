@@ -94,3 +94,21 @@ mount /dev/mapper/cryptovolume /crypto_volume
 8. Проверяю
 
 ![](25.png)
+
+9. Обратно
+```
+umount /crypto_volume
+cryptsetup close cryptovolume
+mkfs.ext4 /dev/ubuntu-vg/new-lv
+mount /dev/ubuntu-vg/new-lv /crypto_volume
+ИЛИ
+lvremove /dev/ubuntu-vg/new-lv
+lvextend -L +1G (или +100%FREE) /dev/ubuntu-vg/lv-0
+resize2fs /dev/ubuntu-vg/lv-0
+
+Возможно потребуется рамнотиновать хоме
+```
+
+
+
+
